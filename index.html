@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cranfield Space Propulsion Laboratory (CSPL)</title>
+<meta name="description" content="The Cranfield Space Propulsion Laboratory researches electric, electrospray and chemical propulsion for the next generation of spacecraft.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/images/logo_blanc.svg" alt="CSPL logo">
+      <div class="brand-text">Cranfield Space Propulsion Laboratory</div>
+    </a>
+    <nav class="links">
+      <div class="has-dropdown">
+        <a href="research.html">Research <span class="caret">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="research-cryogenic-regeneration.html">Cryogenic Regeneration<span class="sub">Air-breathing electric propulsion / PHROST</span></a>
+          <a href="research-electrospray-manufacturing.html">Electrospray Manufacturing<span class="sub">Multiplexed emitter arrays</span></a>
+          <a href="research-ml-propellants.html">ML Propellant Characterisation<span class="sub">Neural networks for novel propellants</span></a>
+          <a href="research-hydrogen-storage.html">Long-term Hydrogen Storage<span class="sub">Cryo-compressed H2 for a lunar supply chain</span></a>
+          <a href="research-metallic-plasma-thrusters.html">Metallic Plasma Thrusters<span class="sub">Vacuum-arc &amp; metal-fed electric propulsion</span></a>
+          <a href="research-master-thesis-highlights.html">Master Thesis Highlights<span class="sub">Student research from the MSc programme</span></a>
+        </div>
+      </div>
+      <a href="people.html" class="">People</a>
+      <a href="facilities.html" class="">Facilities</a>
+      <a href="publications.html" class="">Publications</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="intro-block">
+  <div class="wrap">
+    <div class="eyebrow mono"><span class="dash"></span>Cranfield Space Centre</div>
+    <h1>Future propulsion systems for Earth orbit and beyond.</h1>
+    <p class="lead">The Cranfield Space Propulsion Laboratory (CSPL) designs, models, and tests propulsion systems for the spacecrafts of the future, focusing on electric thrusters, alongside chemical rocket propulsion and critical support systems. CSPL academics are part of Cranfield University Space Centre and teach the modules on Space Propulsion and Space Electric Propulsion for the Astronautics and Space Engineering MSc.</p>
+    <div class="intro-links">
+      <a href="research.html">Explore our research &rarr;</a>
+      <a href="people.html">Meet the team &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="slideshow-wrap">
+  <div class="wrap">
+    <div class="slideshow" id="slideshow">
+      
+      <div class="slide active" data-index="0">
+        <img src="assets/images/hero.jpg" alt="Vacuum Chamber">
+        <div class="tag">Vacuum Chamber</div>
+      </div>
+      <div class="slide" data-index="1">
+        <img src="assets/images/abep_render.jpg" alt="PHROST / Cryogenic Regeneration">
+        <div class="tag">PHROST / Cryogenic Regeneration</div>
+      </div>
+      <div class="slide" data-index="2">
+        <img src="assets/images/electrospray_array.jpg" alt="Multiplexed Electrospray Array">
+        <div class="tag">Multiplexed Electrospray Array</div>
+      </div>
+      <div class="slide" data-index="3">
+        <img src="assets/images/chem_warehouse.jpg" alt="Rocket Engine Laboratory">
+        <div class="tag">Rocket Engine Laboratory</div>
+      </div>
+      <div class="slide" data-index="4">
+        <img src="assets/images/chem_rig.jpg" alt="Liquid Rocket Engine Test Rig">
+        <div class="tag">Liquid Rocket Engine Test Rig</div>
+      </div>
+      <button class="arrow prev" id="slidePrev" aria-label="Previous slide">&#8249;</button>
+      <button class="arrow next" id="slideNext" aria-label="Next slide">&#8250;</button>
+      <div class="dots"><button class="dot active" data-index="0" aria-label="Show slide 1: Vacuum Chamber"></button><button class="dot" data-index="1" aria-label="Show slide 2: PHROST / Cryogenic Regeneration"></button><button class="dot" data-index="2" aria-label="Show slide 3: Multiplexed Electrospray Array"></button><button class="dot" data-index="3" aria-label="Show slide 4: Rocket Engine Laboratory"></button><button class="dot" data-index="4" aria-label="Show slide 5:Liquid Rocket Engine Test Rig"></button></div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const slides = document.querySelectorAll('#slideshow .slide');
+  const dots = document.querySelectorAll('#slideshow .dot');
+  let current = 0;
+  let timer;
+
+  function show(index) {
+    const n = slides.length;
+    const wrapped = ((index % n) + n) % n;
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    slides[wrapped].classList.add('active');
+    dots[wrapped].classList.add('active');
+    current = wrapped;
+  }
+
+  function next() { show(current + 1); }
+  function prev() { show(current - 1); }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(next, 5000);
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => { show(parseInt(dot.dataset.index, 10)); resetTimer(); });
+  });
+  document.getElementById('slideNext').addEventListener('click', () => { next(); resetTimer(); });
+  document.getElementById('slidePrev').addEventListener('click', () => { prev(); resetTimer(); });
+
+  resetTimer();
+})();
+</script>
+
+<section id="domains" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow mono"><span class="dash"></span>What we do</div>
+      <h2>The lab of space propulsion.</h2>
+      <p>While electric propulsion is the lab's predominant focus, built around an expertise in electrospray thrusters, all forms of in-space propulsion are being pursued with forays in chemical propulsion projects such as detonation-based engines, liquid rocket engines, or storage of hydrogen for long-term missions.</p>
+    </div>
+    <div class="domains">
+      <div class="domain">
+        <div class="tagrow"><div class="pnum">01</div></div>
+        <h3>Electric Propulsion</h3>
+        <p>High-performance thrusters for spacecrafts, and the systems that keep them fed, from multiplexed electrospray arrays for Smallsats to active cryogenic intakes for Atmosphere-Breathing Electric Propulsion.</p>
+        <ul>
+          <li>Cryogenic propellant regeneration for ABEP</li>
+          <li>Multiplexed electrospray thruster manufacturing</li>
+          <li>ML-driven molecular propellant characterisation</li>
+          <li>Metallic Plasma Thrusters</li>
+        </ul>
+        <a class="more" href="research.html#electric">More on Electric Propulsion &rarr;</a>
+      </div>
+      <div class="domain">
+        <div class="tagrow"><div class="pnum">02</div></div>
+        <h3>Chemical Propulsion</h3>
+        <p>High-thrust systems for launch, landing and orbital manoeuvres, built and fired in Cranfield's own test warehouse.</p>
+        <ul>
+          <li>Rotating detonation engines</li>
+          <li>Long-term hydrogen storage</li>
+          <li>Liquid &amp; monopropellant rockets</li>
+          <li>Electro-fluidic injectors</li>
+        </ul>
+        <a class="more" href="research.html#chemical">More on Chemical Propulsion &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow mono"><span class="dash"></span>Research highlights</div>
+      <h2>Three current highlighted projects.</h2>
+    </div>
+    <div class="project-grid">
+      <a class="project-card" href="research-cryogenic-regeneration.html">
+        <div class="thumb"><img src="assets/images/abep_render.jpg" alt="Cutaway render of the PHROST cryogenic propellant regeneration system"></div>
+        <div class="body">
+          <div class="tag">Electric Propulsion</div>
+          <h3>Cryogenic Regeneration</h3>
+          <p>A cryopump-based intake that captures and stores atmospheric propellant between orbits, decoupling collection from thrust for air-breathing electric propulsion &mdash; one of the pillars of CSPL's EP programme.</p>
+          <div class="link">Read the project &rarr;</div>
+        </div>
+      </a>
+      <a class="project-card" href="research-electrospray-manufacturing.html">
+        <div class="thumb"><img src="assets/images/electrospray_array.jpg" alt="Close-up of a multiplexed electrospray emitter array"></div>
+        <div class="body">
+          <div class="tag">Electric Propulsion</div>
+          <h3>Electrospray Manufacturing</h3>
+          <p>Multiplexing hundreds of emission sites into compact arrays, and developing low-cost porous materials to replace costly sintered metals and glass substrates.</p>
+          <div class="link">Read the project &rarr;</div>
+        </div>
+      </a>
+      <a class="project-card" href="research-ml-propellants.html">
+        <div class="thumb"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:#0A2848;">
+  <g stroke="rgba(73,211,232,0.35)" stroke-width="1">
+    <line x1="70" y1="70" x2="200" y2="60"/><line x1="70" y1="70" x2="200" y2="130"/><line x1="70" y1="70" x2="200" y2="200"/>
+    <line x1="70" y1="150" x2="200" y2="60"/><line x1="70" y1="150" x2="200" y2="130"/><line x1="70" y1="150" x2="200" y2="200"/><line x1="70" y1="150" x2="200" y2="240"/>
+    <line x1="70" y1="230" x2="200" y2="130"/><line x1="70" y1="230" x2="200" y2="200"/><line x1="70" y1="230" x2="200" y2="240"/>
+    <line x1="200" y1="60" x2="330" y2="110"/><line x1="200" y1="130" x2="330" y2="110"/><line x1="200" y1="200" x2="330" y2="110"/>
+    <line x1="200" y1="130" x2="330" y2="190"/><line x1="200" y1="200" x2="330" y2="190"/><line x1="200" y1="240" x2="330" y2="190"/>
+  </g>
+  <g fill="#0A2848" stroke="#49D3E8" stroke-width="1.5">
+    <circle cx="70" cy="70" r="7"/><circle cx="70" cy="150" r="7"/><circle cx="70" cy="230" r="7"/>
+    <circle cx="200" cy="60" r="7"/><circle cx="200" cy="130" r="7"/><circle cx="200" cy="200" r="7"/><circle cx="200" cy="240" r="7"/>
+    <circle cx="330" cy="110" r="7" fill="#49D3E8"/><circle cx="330" cy="190" r="7" fill="#49D3E8"/>
+  </g>
+</svg></div>
+        <div class="body">
+          <div class="tag">Electric Propulsion</div>
+          <h3>ML Propellant Characterisation</h3>
+          <p>Neural networks trained on mass-spectrometry data predict how novel molecular propellants will ionise, before they're ever tested on a bench.</p>
+          <div class="link">Read the project &rarr;</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="pi-card" style="background:var(--paper); border:1px solid var(--line);">
+      <div class="pi-photo" style="min-height:280px;"><img src="assets/images/pi_photo.jpg" alt="Dr Enric Grustan-Gutiérrez"></div>
+      <div class="pi-body" style="color:var(--ink);">
+        <div class="role" style="color:var(--blue);">Principal Investigator</div>
+        <h3 style="color:var(--navy);">Dr Enric Grustan-Gutiérrez</h3>
+        <div class="dept" style="color:var(--graphite);">Lecturer in Space Engineering &middot; Cranfield Space Centre</div>
+        <p style="color:var(--graphite);">Formerly of the University of Glasgow, Queen Mary University of London and UC Irvine, Enric leads CSPL's research spanning electrospray manufacturing, air-breathing propulsion and chemical rocket engines.</p>
+        <a href="people.html" class="btn btn-navy" style="margin-top:8px; display:inline-flex;">Meet the full team &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-band" id="contact">
+  <div class="wrap contact-inner">
+    <div>
+      <div class="eyebrow mono"><span class="dash" style="background:var(--cyan);"></span><span style="color:var(--cyan);">Get in touch</span></div>
+      <h2 style="margin-top:14px;">Interested in a PhD, collaboration, or industry project?</h2>
+      <p>CSPL welcomes enquiries from prospective research students, industry partners and fellow academics working across electric and chemical propulsion.</p>
+    </div>
+    <div class="contact-card">
+      <div class="row"><div class="k">Email</div><div class="v"><a href="mailto:E.Grustan@cranfield.ac.uk">E.Grustan@cranfield.ac.uk</a></div></div>
+      <div class="row"><div class="k">Phone</div><div class="v">+44 (0)1234 758217</div></div>
+      <div class="row"><div class="k">Address</div><div class="v">Cranfield University<br>College Road, Cranfield<br>MK43 0AL, UK</div></div>
+      <div class="row"><div class="k">Centre</div><div class="v">Cranfield Space Centre</div></div>
+      <div class="row"><div class="k">ORCID</div><div class="v"><a href="https://orcid.org/0000-0002-2898-2056" target="_blank" rel="noopener">0000-0002-2898-2056</a></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 Cranfield Space Propulsion Laboratory &middot; Cranfield University</div>
+    <div><a href="https://www.cranfield.ac.uk/people/dr-enric-grustan-gutierrez-34282404" target="_blank" rel="noopener">Cranfield profile</a> &middot; <a href="https://scholar.google.com/citations?user=xD1AS20AAAAJ&hl=ca" target="_blank" rel="noopener">Google Scholar</a></div>
+  </div>
+</footer>
+</body>
+</html>
