@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Master Thesis Highlights | CSPL Research</title>
+<meta name="description" content="Highlights from MSc research projects at the Cranfield Space Propulsion Laboratory.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/images/logo_blanc.svg" alt="CSPL logo">
+      <div class="brand-text">Cranfield Space Propulsion Laboratory</div>
+    </a>
+    <nav class="links">
+      <div class="has-dropdown active">
+        <a href="research.html">Research <span class="caret">&#9662;</span></a>
+        <div class="dropdown">
+          <a href="research-cryogenic-regeneration.html">Cryogenic Regeneration<span class="sub">Air-breathing electric propulsion / PHROST</span></a>
+          <a href="research-electrospray-manufacturing.html">Electrospray Manufacturing<span class="sub">Multiplexed emitter arrays</span></a>
+          <a href="research-ml-propellants.html">ML Propellant Characterisation<span class="sub">Neural networks for novel propellants</span></a>
+          <a href="research-hydrogen-storage.html">Long-term Hydrogen Storage<span class="sub">Cryo-compressed H2 for a lunar supply chain</span></a>
+          <a href="research-metallic-plasma-thrusters.html">Metallic Plasma Thrusters<span class="sub">Vacuum-arc &amp; metal-fed electric propulsion</span></a>
+          <a href="research-master-thesis-highlights.html">Master Thesis Highlights<span class="sub">Student research from the MSc programme</span></a>
+        </div>
+      </div>
+      <a href="people.html" class="">People</a>
+      <a href="facilities.html" class="">Facilities</a>
+      <a href="publications.html" class="">Publications</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="plain-head">
+  <div class="wrap">
+    <div class="breadcrumb breadcrumb-light"><a href="index.html">Home</a> / <a href="research.html">Research</a> / Master Thesis Highlights</div>
+    <h1>Master Thesis Highlights</h1>
+    <p>Selected MSc research from CSPL's student programme, some of which has gone on to become full research projects.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <div class="deep">
+      <figure class="deep-media">
+        <img src="assets/images/abep_render.jpg" alt="Cutaway render of the PHROST cryogenic propellant regeneration system">
+        <figcaption>The PHROST concept, which began life as a 2021 MSc thesis</figcaption>
+      </figure>
+      <div class="deep-text">
+        <div class="tag">MSc, 2021</div>
+        <h3>From thesis to ESA co-funded PhD</h3>
+        <p>Cameron Leslie's MSc thesis, supervised by Professor Stephen Hobbs over the summer of 2021, investigated the Air-Breathing Electric Propulsion (ABEP) concept from first principles, deriving a baseline system model and running the initial performance calculations for a cryopump-based propellant intake.</p>
+        <p>That thesis work went on to secure UK Space Agency feasibility funding and now underpins an ESA co-funded PhD (2024&ndash;2027) that develops the concept into hardware. It's the clearest example so far of an MSc project at CSPL growing into a full research programme.</p>
+        <a href="research-cryogenic-regeneration.html" class="btn btn-navy" style="margin-top:8px; display:inline-flex;">Read the full project &rarr;</a>
+      </div>
+    </div>
+
+    <h2 style="margin-top:48px;">Liquid Rocket Propulsion</h2>
+
+    <div class="deep">
+      <figure class="deep-media">
+        <video controls preload="metadata" poster="assets/images/thesis-highlights/cstar-cyclone-hotfire.jpg" style="width:100%; height:auto; display:block; border-radius:4px;">
+          <source src="assets/images/thesis-highlights/cstar-cyclone-hotfire.mp4" type="video/mp4">
+          Your browser does not support the video tag. <a href="assets/images/thesis-highlights/cstar-cyclone-hotfire.mp4">Download the clip</a> instead.
+        </video>
+        <figcaption>Cyclone's first hot-fire, Cranfield test site, 25 August 2022, ~4.5&ndash;5&nbsp;s burn, 1.5kN N&#8322;O/IPA</figcaption>
+      </figure>
+      <div class="deep-text">
+        <div class="tag">MSc, 2022</div>
+        <h3>Project C-Star: Cyclone's first hot-fire</h3>
+        <p>Benjamin Kanda and Aaron Singh Sidhu's paired 2022 projects, together known as Project C-Star, delivered Cranfield's first 1.5kN N&#8322;O/isopropanol bipropellant sounding rocket engine, "Cyclone." Kanda's half of the work designed, built and test-fired the engine itself, proving out a metal 3D-printed swirl/showerhead injector and a cork-phenolic ablative liner across the stable ~5-second burn shown here. Sidhu's half designed and built the feed, control, ignition and data-acquisition systems and test/tank stands that supported it, devising the ignition sequence used in this first successful hot-fire on 25 August 2022.</p>
+      </div>
+    </div>
+
+
+    <h2 style="margin-top:48px;">Rotating Detonation Engines</h2>
+
+    <div class="deep">
+      <figure class="deep-media">
+        <img src="assets/images/thesis-highlights/rde-2d-blast-sim.png" alt="Pressure contour from the vectorized 2D Euler solver's circular blast verification case">
+        <figcaption>Circular blast verification case, vectorised 2D Euler solver, t = 0.19&nbsp;s</figcaption>
+      </figure>
+      <div class="deep-text">
+        <div class="tag">MSc, 2025</div>
+        <h3>A vectorised 2D Euler solver for detonation studies</h3>
+        <p>Genis Bonet Garcia's thesis ported an existing MATLAB RDE flow solver into a fully vectorised Python/NumPy implementation, pairing MUSCL reconstruction with an HLLE Riemann flux and SSP-RK2 time-stepping. Verified against the Sod shock tube and this circular blast case, the vectorised solver matched the MATLAB baseline to sub-1 % accuracy while running roughly 17-18&times; faster on larger grids. A companion JAX-based chemistry module, benchmarked against Cantera, showed accelerating speed-ups (up to 37&times;) as the number of reactors grew, laying the groundwork for future operator-split reactive coupling.</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <figure class="deep-media">
+        <img src="assets/images/thesis-highlights/hollow-rde-chamber.jpg" alt="CAD model cross-section of the Hollow RDE combustion chamber">
+        <figcaption>CAD model of the Hollow RDE combustion chamber</figcaption>
+      </figure>
+      <div class="deep-text">
+        <div class="tag">MSc, 2025</div>
+        <h3>A modular Hollow RDE technology demonstrator</h3>
+        <p>Jack Tasker's thesis addressed the Hollow RDE variant, intended to mitigate the heat-transfer and wave-stability challenges facing conventional rotating detonation engines. His work delivered a modular, oxygen-rich test rig rated to a 5 MPa chamber pressure, designed to enable future researchers to reproduce prior numerical and experimental studies and to trial new injector and geometry configurations with minimal rebuild effort.</p>
+      </div>
+    </div>
+
+    <div class="deep">
+      <figure class="deep-media">
+        <img src="assets/images/thesis-highlights/predetonator-tube.jpg" alt="Instrumented acetylene-oxygen pre-detonator tube with pressure sensors and capillary tubes">
+        <figcaption>The instrumented pre-detonator tube, with pressure sensors and soot-foil flange</figcaption>
+      </figure>
+      <div class="deep-text">
+        <div class="tag">MSc, 2023</div>
+        <h3>Characterising a pre-detonator for reliable wave initiation</h3>
+        <p>Gregor Arbuckle's project tackled one of the most practical bottlenecks in detonation engines: reliably triggering a detonation wave in the first place. Using an acetylene-oxygen pre-detonator tube instrumented with pressure sensors and soot foils, he confirmed consistent supersonic wave generation across equivalence ratios of 0.45-1.36. He showed that cell size, and hence detonability, could be tuned via the fuel/oxidiser ratio, insight that feeds directly into designing pre-detonators for larger RDE test rigs.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:48px;">Electric Propulsion</h2>
+
+    <div class="deep">
+      <figure class="deep-media">
+        <img src="assets/images/thesis-highlights/het-thruster-assembly.jpg" alt="Completed low-cost Hall-effect thruster assembly in the short-channel configuration">
+        <figcaption>Completed thruster assembly, short-channel configuration</figcaption>
+      </figure>
+      <div class="deep-text">
+        <div class="tag">MSc, 2025</div>
+        <h3>A low-cost Hall-effect thruster testbed for teaching and research</h3>
+        <p>Josh Worwood's thesis designed and built a laboratory-scale Stationary Plasma (Hall-effect) Thruster testbed intended to make electric-propulsion hardware accessible for education and research. Starting from sub-kilowatt scaling laws and finite-element modelling of the magnetic circuit, the design was translated into a manufacturable two-configuration (short/long channel) thruster using boron nitride channel inserts, EN1A steel magnetic cores, and custom-wound electromagnets, demonstrating that a HET prototype can be realised within the scope of a single master's thesis.</p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<section class="contact-band" id="contact">
+  <div class="wrap contact-inner">
+    <div>
+      <div class="eyebrow mono"><span class="dash" style="background:var(--cyan);"></span><span style="color:var(--cyan);">Get in touch</span></div>
+      <h2 style="margin-top:14px;">Interested in a PhD, collaboration, or industry project?</h2>
+      <p>CSPL welcomes enquiries from prospective research students, industry partners and fellow academics working across electric and chemical propulsion.</p>
+    </div>
+    <div class="contact-card">
+      <div class="row"><div class="k">Email</div><div class="v"><a href="mailto:E.Grustan@cranfield.ac.uk">E.Grustan@cranfield.ac.uk</a></div></div>
+      <div class="row"><div class="k">Phone</div><div class="v">+44 (0)1234 758217</div></div>
+      <div class="row"><div class="k">Address</div><div class="v">Cranfield University<br>College Road, Cranfield<br>MK43 0AL, UK</div></div>
+      <div class="row"><div class="k">Centre</div><div class="v">Cranfield Space Centre</div></div>
+      <div class="row"><div class="k">ORCID</div><div class="v"><a href="https://orcid.org/0000-0002-2898-2056" target="_blank" rel="noopener">0000-0002-2898-2056</a></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; 2026 Cranfield Space Propulsion Laboratory &middot; Cranfield University</div>
+    <div><a href="https://www.cranfield.ac.uk/people/dr-enric-grustan-gutierrez-34282404" target="_blank" rel="noopener">Cranfield profile</a> &middot; <a href="https://scholar.google.com/citations?user=xD1AS20AAAAJ&hl=ca" target="_blank" rel="noopener">Google Scholar</a></div>
+  </div>
+</footer>
+</body>
+</html>
