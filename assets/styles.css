@@ -149,10 +149,10 @@ nav.links > a.active{color:#fff; background:rgba(255,255,255,0.12);}
 .btn-navy:hover{background:var(--navy); color:#fff;}
 
 /* ---------- SECTION SHARED ---------- */
-section{padding:100px 0;}
+section{padding:20px 0 100px;}
 section.alt{background:var(--panel);}
 section.tight{padding:72px 0;}
-.section-head{max-width:660px; margin-bottom:52px;}
+.section-head{max-width:800px; margin-bottom:52px;}
 .section-head.center{max-width:720px; margin-left:auto; margin-right:auto; text-align:center;}
 .section-head .eyebrow{color:var(--blue);}
 .section-head.center .eyebrow{justify-content:center;}
@@ -211,14 +211,16 @@ section.tight{padding:72px 0;}
 /* ---------- DEEP DIVE (project detail pages) ---------- */
 .deep{
   display:grid;
-  grid-template-columns:0.9fr 1.1fr;
-  gap:64px;
+  grid-template-columns:2fr 1.6fr;
+  gap:50px;
   align-items:center;
   margin-bottom:96px;
 }
 .deep:last-child{margin-bottom:0;}
+.deep.rev{grid-template-columns: 1.6fr 2fr;}
 .deep.rev .deep-media{order:2;}
 .deep.rev .deep-text{order:1;}
+.deep-media{margin: 0;}
 .deep-media img{width:100%; border-radius:var(--radius); box-shadow:0 24px 48px -24px rgba(10,40,72,0.35);}
 .deep-media figcaption{margin-top:10px; font-size:0.78rem; color:var(--graphite); font-family:'IBM Plex Mono', monospace;}
 .deep-text .tag{color:var(--blue); font-family:'IBM Plex Mono', monospace; font-size:0.72rem; font-weight:600; text-transform:uppercase; letter-spacing:0.12em;}
